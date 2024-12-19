@@ -16,9 +16,9 @@ const scores = [
 // 66
 // ==========================================
 
-
-
-
+for (let j = 0; j < scores.length; j++) {
+    console.log(scores[j].score);
+}
 
 // ==========================================
 // Opdracht 1b
@@ -32,9 +32,25 @@ const scores = [
 // D
 // ==========================================
 
+for (let j = 0; j < scores.length; j++) {
+    if (scores[j].score <= 100 && scores[j].score >= 90) {
+        scores[j].grade = "A";
+    }
+    else if (scores[j].score < 90 && scores[j].score >= 80) {
+        scores[j].grade = "B";
+    }
+    else if (scores[j].score < 80 && scores[j].score >= 70) {
+        scores[j].grade = "C";
+    }
+    else if (scores[j].score < 70 && scores[j].score >= 60) {
+        scores[j].grade = "D";
+    }
+    else if (scores[j].score < 60) {
+        scores[j].grade = "F";
+    }
+}
 
-
-
+console.log(scores);
 
 // ==========================================
 // Opdracht 1c

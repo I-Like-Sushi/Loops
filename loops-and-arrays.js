@@ -70,8 +70,8 @@ const squares = [30, 2, 8, 24, 11];
 // ]
 
 for (let k = 0; k < squares.length; k++) {
-
+    squares[k] = (`Het volume van ${squares[k]} is ${squares[k] * squares[k] * squares[k]}`);
 }
 
-
+console.log(squares);
 
