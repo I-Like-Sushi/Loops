@@ -16,9 +16,9 @@ const scores = [
 // 66
 // ==========================================
 
-
-
-
+for (let j = 0; j < scores.length; j++) {
+    console.log(scores[j].score);
+}
 
 // ==========================================
 // Opdracht 1b
@@ -32,7 +32,24 @@ const scores = [
 // D
 // ==========================================
 
-
+for (let j = 0; j < scores.length; j++) {
+    if (scores[j].score <= 100 && scores[j].score >= 90) {
+        scores[j].grade = "A";
+    }
+    else if (scores[j].score < 90 && scores[j].score >= 80) {
+        scores[j].grade = "B";
+    }
+    else if (scores[j].score < 80 && scores[j].score >= 70) {
+        scores[j].grade = "C";
+    }
+    else if (scores[j].score < 70 && scores[j].score >= 60) {
+        scores[j].grade = "D";
+    }
+    else if (scores[j].score < 60) {
+        scores[j].grade = "F";
+    }
+    console.log(scores[j].grade)
+}
 
 
 
@@ -50,7 +67,7 @@ const scores = [
 // ==========================================
 
 
-
+console.log(scores);
 
 
 // ==========================================
@@ -76,9 +93,11 @@ const NOVIEmployees = [
 // ==========================================
 
 
+for (let j = 0; j < NOVIEmployees.length; j++) {
+    NOVIEmployees[j].email = `${NOVIEmployees[j].firstName.toLowerCase()}.${NOVIEmployees[j].lastName.toLowerCase()}@novi.nl`;
+}
 
-
-
+console.log(NOVIEmployees)
 
 // Opdracht 2-BONUS
 // Lukt het je om ervoor te zorgen dat alle e-mailadressen in lowercase letters komen te staan? Dit heb je nog niet geleerd, maar google is your best friend...
@@ -113,6 +132,37 @@ const students = [
     {name: 'Aicha', city: 'Utrecht', zipCode: '3514', neighborhood: null},
     {name: 'Karima', city: 'Utrecht', zipCode: '3531', neighborhood: null},
 ];
+
+for (let j = 0; j < students.length; j++) {
+    if (students[j].zipCode === "3513"){
+        students[j].neighborhood = "Pijlsweerd"
+    }
+    else if (students[j].zipCode === "3514"){
+            students[j].neighborhood = "Vogelenbuurt"
+        }
+    else if (students[j].zipCode === "3512")
+        {
+            students[j].neighborhood = "Binnenstad"
+        }
+    else if (students[j].zipCode === "3531")
+        {
+            students[j].neighborhood = "Lombok"
+        }
+    else if (students[j].zipCode === "3572")
+        {
+            students[j].neighborhood = "Wittevrouwen"
+        }
+    else if (students[j].zipCode === "3581")
+        {
+            students[j].neighborhood = "Oudwijk"
+        }
+    else if (students[j].zipCode === "3583")
+        {
+            students[j].neighborhood = "Schildersbuurt"
+        }
+}
+
+console.log(students);
 
 // Verwachte uitkomsten:
 // [
