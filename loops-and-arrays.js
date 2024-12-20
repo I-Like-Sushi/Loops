@@ -35,10 +35,10 @@ const numbers = [2, 4, 5, 29, 38];
 
 for (let k = 0; k < numbers.length; k++) {
     if (numbers[k] % 2 === 0) {
-        numbers.push(numbers[k] * 2);
+        numbers[k] = (numbers[k] * 2);
     }
-    else if (numbers[k] % 3 === 0) {
-        numbers.push(numbers[k] * 3);
+    else {
+        numbers[k] = (numbers[k] * 3);
     }
 }
 
